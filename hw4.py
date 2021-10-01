@@ -245,21 +245,20 @@ def main():
     #Try all cases in the validate_order function     !!!! IN PROGRESS 
     #Below you need to have *each customer instance* try the four cases
 
-    def testing_validate_order2(self): #O.G 
+    #def testing_validate_order2(self): #O.G 
 
     #case 1: the cashier does not have the stall 
-        self.assertFalse(person8.validate_order(employee1, place3, "Birria", 2))
+    person9.validate_order(employee1, place2, "tacos", 7)
 
     #case 2: the casher has the stall, but not enough ordered food or the ordered food item
-        self.assertFalse(person9.validate_order(employee1, place1, "tacos", 7))
+    person9.validate_order(employee1, place1, "tacos", 7)
 
     #case 3: the customer does not have enough money to pay for the order: 
-        #self.assertFalse(self.person4.validate_order(self.c1, self.s1, "Burger", 1))
-        self.assertFalse(person8.validate_order(employee1, place1, "tacos", 2))
+    person8.validate_order(employee1, place1, "tacos", 2)    
 
     #case 4: the customer successfully places an order
-        self.assertTrue(person9.validate_order(employee1, place1, "tacos", 5))
-    #pass
+    person9.validate_order(employee1, place1, "tacos", 3)
+    
 
 if __name__ == "__main__":
 	main()
