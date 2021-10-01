@@ -232,7 +232,7 @@ def main():
     first_inventory = {"tacos": 6, "tamales": 20, "torta": 20}
     second_inventory = {"churros": 20, "elotes": 20, "churritos": 20}
     #   Create at least 3 customer objects
-    person7 = Customer("Michael")  # not used 
+    person7 = Customer("Michael")  
     person8 = Customer("George", 4)
     person9 = Customer("Luis", 150)
     #   Create at least 2 Stall objects
@@ -245,12 +245,9 @@ def main():
     #Try all cases in the validate_order function     !!!! IN PROGRESS 
     #Below you need to have *each customer instance* try the four cases
 
-    
     def testing_validate_order2(self): #O.G 
 
     #case 1: the cashier does not have the stall 
-        
-
         self.assertFalse(person8.validate_order(employee1, place3, "Birria", 2))
 
     #case 2: the casher has the stall, but not enough ordered food or the ordered food item
@@ -262,32 +259,7 @@ def main():
 
     #case 4: the customer successfully places an order
         self.assertTrue(person9.validate_order(employee1, place1, "tacos", 5))
-    ''' 
-    def validate_order(self, cashier, stall, item_name, quantity):
-        if not(cashier.has_stall(stall)):
-            print("Sorry, we don't have that vendor stall. Please try a different one.")
-        elif not(stall.has_item(item_name, quantity)):  
-            print("Our stall has run out of " + item_name + " :( Please try a different stall!")
-        elif self.wallet < stall.compute_cost(quantity): 
-            print("Don't have enough money for that :( Please reload more money!")
-        else:
-            bill = cashier.place_order(stall, item_name, quantity) 
-            self.submit_order(cashier, stall, bill) 
-    
- def test_validate_order(self):
-        inventory = {"Burger":5, "Taco":50}
-        self.person3 = Customer("Joel", 150)
-        self.person4 = Customer("Ricky", 5)
-		# case 1: test if a customer doesn't have enough money in their wallet to order
-        self.assertFalse(self.person4.validate_order(self.c1, self.s1, "Burger", 1))   # person4 or cashiers?
-		# case 2: test if the stall doesn't have enough food left in stock
-        self.assertFalse(self.person3.validate_order(self.c1, self.s1, "Burger", 6))   # person4 or cashiers?
-		# case 3: check if the cashier can order item from that stall
-        self.assertFalse(self.person3.validate_order(self.c1, self.s1, "Burger", 1 ))                       #use assertFalse or??
-
-    '''
-
-    pass
+    #pass
 
 if __name__ == "__main__":
 	main()
